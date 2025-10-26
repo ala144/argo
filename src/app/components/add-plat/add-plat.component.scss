@@ -1,0 +1,95 @@
+/* create-menu.component.scss (ou tout autre fichier CSS/SCSS associé) */
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 40px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding:10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .text-danger {
+    color: red;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  /* create-menu.component.scss (ou tout autre fichier CSS/SCSS associé) */
+
+/* Ajouter une classe pour le conteneur du formulaire */
+.form-container {
+    width: 50%; /* Définir une largeur pour le conteneur */
+    margin: 0 auto; /* Utiliser 'auto' pour centrer horizontalement */
+  }
+  .background-image {
+    background-image: url('/assets/1234.avif'); /* Chemin vers l'image de fond */
+    background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Assurez-vous que le fond d'écran occupe toute la hauteur de l'écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed; /* Fixer le fond d'écran pendant le défilement */
+  border: 2px solid #ccc; /* Ajoutez ici les propriétés de la bordure */
+  border-radius: 10px; /* Pour ajouter des coins arrondis */
+  padding: 20px; 
+
+  }
+  h1.my-4 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #0056b3;
+  }
+  /* Styles pour la barre de sélection */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+  }
+  
+  /* Style pour la flèche de la barre de sélection */
+ 
+  
+  
+  
+  

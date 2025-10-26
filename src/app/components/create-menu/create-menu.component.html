@@ -1,0 +1,24 @@
+<!-- create-menu.component.html -->
+<h1>Créer un menu</h1>
+
+<form [formGroup]="menuForm" (ngSubmit)="createNewMenu()">
+  <div>
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" formControlName="nom">
+    <div *ngIf="menuForm.get('nom').invalid && menuForm.get('nom').touched">
+      Le nom du menu est requis.
+    </div>
+  </div>
+
+  <div>
+    <label for="speciality">Spécialité :</label>
+    <input type="text" id="speciality" formControlName="speciality">
+    <div *ngIf="menuForm.get('speciality').invalid && menuForm.get('speciality').touched">
+      La spécialité du menu est requise.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="menuForm.invalid">Créer le menu</button>
+</form>
+
+  

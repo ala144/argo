@@ -1,0 +1,18 @@
+/* styles.css (or your custom CSS file) */
+.enlarged-logo {
+    width: 300px; /* Set the desired width of the logo */
+    height: auto; /* Set height to 'auto' to maintain the aspect ratio */
+  }
+  @media (max-width: 767px) {
+    .enlarged-logo {
+      width: 100px; /* Set a smaller width for smaller screens */
+      height: auto; /* Set height to 'auto' to maintain aspect ratio */
+    }
+  }
+  
+  
+  
+  
+  
+  
+  

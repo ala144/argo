@@ -1,0 +1,32 @@
+<div class="form-container">
+  <h1 class="my-4 font-weight-bold text-right">Ajouter un plat</h1>
+
+  <form [formGroup]="platForm" (ngSubmit)="onSubmit()" class="col-md-6 ">
+      <div class="form-group">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" formControlName="nom" class="form-control">
+        <div *ngIf="platForm.get('nom').invalid && platForm.get('nom').touched" class="text-danger">
+          Le nom du plat est requis.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="prix">Prix :</label>
+        <input type="number" id="prix" formControlName="prix" class="form-control">
+        <div *ngIf="platForm.get('prix').invalid && platForm.get('prix').touched" class="text-danger">
+          Le prix du plat est requis.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="menu">Menu :</label>
+        <select id="menu" formControlName="menuId" class="form-control" style="font-size: 16px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff; color: #333;">
+          <option *ngFor="let menu of menus" [value]="menu.id">{{ menu.nom }}</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Ajouter le plat au menu</button>
+    </form>
+</div>
+
+

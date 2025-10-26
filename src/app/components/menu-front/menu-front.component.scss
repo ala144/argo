@@ -1,0 +1,163 @@
+/* Style pour la div contenant les cards */
+.menu-card-container {
+    padding: 20px;
+  }
+  
+  /* Style pour les cards */
+  .card {
+    width: 18rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Style pour la mise en surbrillance des cards lors du survol */
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Style pour le titre des cards */
+  .mat-card-header {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Style pour le bouton d'action "Voir plats" */
+  .actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  /* Style pour les listes des plats */
+  .list-group-item {
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* Style pour les inputs de commentaire */
+  .comment-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    background-color: #fff;
+  }
+  
+  /* Style pour le bouton d'action des commentaires */
+  .comment-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  /* Style pour l'icône du bouton d'action des commentaires */
+  .comment-button mat-icon {
+    font-size: 16px;
+  }
+  
+  /* Style pour le placeholder des inputs de commentaire */
+  .comment-input::placeholder {
+    color: #ccc;
+  }
+  
+  /* Style pour l'icône du bouton "Voir plats" */
+  .mat-icon-button {
+    font-size: 24px;
+  }
+  
+  /* Classe active pour agrandir les cartes lorsque la liste des plats est affichée */
+  .card.active {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
+  
+  /* Style pour la couleur de fond des cards */
+  .custom-card {
+    background-color: #f8f9fa; /* Couleur de fond */
+  }
+  /* Style pour les commentaires */
+.comment-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .plat-info {
+    flex: 1;
+  }
+  
+  .comment-input {
+    flex: 1;
+    border-radius: 25px;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+  }
+  
+  .comment-button {
+    border-radius: 50%;
+    margin-left: 8px;
+  }
+  .background-image {
+    background-image: url('/assets/back2.jpg'); /* Chemin vers l'image de fond */
+    background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Assurez-vous que le fond d'écran occupe toute la hauteur de l'écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed; /* Fixer le fond d'écran pendant le défilement */
+  border: 2px solid #ccc; /* Ajoutez ici les propriétés de la bordure */
+  border-radius: 10px; /* Pour ajouter des coins arrondis */
+  padding: 20px; 
+  height: 100vh; /* Set the height to 100% of the viewport height */
+
+  }
+  /* ... Your other styles ... */
+
+/* Star rating styles */
+.star-rating {
+    display: inline-block;
+    font-size: 24px;
+  }
+  
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  
+  .star-rating label {
+    float: right;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .star-rating label:before {
+    content: '\2605';
+  }
+  
+  .star-rating input[type="radio"]:checked ~ label {
+    color: #f6b93b; /* Yellow color for the selected stars */
+  }
+  .container{
+    height: 100vh; /* Set the height to 100% of the viewport height */
+
+
+
+  }
+  /* Style pour la classe 'plats-container' */
+.plats-container {
+  max-height: 400px; /* Ajustez la hauteur maximale selon vos besoins */
+  overflow-y: auto; /* Ajoutez une barre de défilement si le contenu dépasse la hauteur maximale */
+  padding: 10px; /* Ajoutez un peu de marge intérieure pour un meilleur espacement */
+}
+
+ 
+  
+  

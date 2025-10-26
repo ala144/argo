@@ -1,0 +1,73 @@
+<div class="container background-image">
+  <h1 class="my-4 font-weight-bold text-right">Menus</h1>
+  <div class="menu-card-container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let menu of menus">
+        <mat-card class="card mb-4 custom-card" [ngClass]="{'active': selectedMenuId === menu.id}">
+          <mat-card-header>
+            {{ menu.nom }}
+          </mat-card-header>
+          <mat-card-content>
+            <p class="card-text">Spécialité: {{ menu.speciality }}</p>
+            <p class="card-text">Note: {{ menu.rating }}</p> <!-- Display the average rating for each menu -->
+
+            <div class="actions">
+              <button mat-icon-button color="primary" (click)="viewPlats(menu.id)">
+                <mat-icon>voir_plats</mat-icon>
+              </button>
+            </div>
+            <div *ngIf="selectedMenuId === menu.id">
+              <ul class="list-group mt-3 plats-container">
+                <li class="list-group-item" *ngFor="let plat of plats">
+                  {{ plat.nom }} - {{ plat.prix }} € - {{plat.note}}/5
+                  <div class="star-rating">
+                    <input type="radio" id="star5-{{ plat.id }}" name="rating{{ plat.id }}" value="5" (click)="ratePlat(plat, 5)"/>
+                    <label for="star5-{{ plat.id }}" title="5 stars">&#9733;</label>
+                    <input type="radio" id="star4-{{ plat.id }}" name="rating{{ plat.id }}" value="4" (click)="ratePlat(plat, 4)"/>
+                    <label for="star4-{{ plat.id }}" title="4 stars">&#9733;</label>
+                    <input type="radio" id="star3-{{ plat.id }}" name="rating{{ plat.id }}" value="3" (click)="ratePlat(plat, 3)"/>
+                    <label for="star3-{{ plat.id }}" title="3 stars">&#9733;</label>
+                    <input type="radio" id="star2-{{ plat.id }}" name="rating{{ plat.id }}" value="2" (click)="ratePlat(plat, 2)"/>
+                    <label for="star2-{{ plat.id }}" title="2 stars">&#9733;</label>
+                    <input type="radio" id="star1-{{ plat.id }}" name="rating{{ plat.id }}" value="1" (click)="ratePlat(plat, 1)"/>
+                    <label for="star1-{{ plat.id }}" title="1 star">&#9733;</label>
+                  </div>
+
+                  <div class="input-group mt-2 comment-container">
+                    <input type="text" class="form-control comment-input" [(ngModel)]="plat.commentaire" placeholder="Ajouter un commentaire">
+                    <div class="input-group-append">
+                      <button class="comment-button" (click)="saveCommentaire(plat)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path d="M21 3c-1.1 0-2 .9-2 2v11c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1-.9-2-2-2H2c-.55 0-1 .45-1 1v15c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-8 11H4v-2h9v2zm8-4H4V8h17v2z"/>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Afficher les commentaires associés au plat -->
+                  <div class="comment-section" *ngIf="plat.showComments">
+                    <mat-accordion>
+                      <mat-expansion-panel *ngFor="let commentaire of plat.commentaires">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                            {{ commentaire.text }}
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <!-- Additional comment details if necessary -->
+                      </mat-expansion-panel>
+                    </mat-accordion>
+                  </div>
+
+                  <!-- Bouton pour afficher ou masquer les commentaires -->
+                  <button class="toggle-comments-button" mat-icon-button color="primary" (click)="toggleComments(plat)">
+                    <mat-icon>{{ plat.showComments ? 'voir_moins' : 'voir_plus' }}</mat-icon>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+
+// .table {
+//   width: 100%;
+//   margin-bottom: 20px;
+//   border-collapse: collapse;
+// }
+
+// .table th,
+// .table td {
+//   border: 1px solid #dee2e6;
+//   padding: 8px;
+ 
+//   font-weight: bold;
+// }
+
+// .add-menu-button {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// div[ngIf="showPlats"] {
+//   margin-top: 50px;
+//   text-align: center;
+// }
+
+// .table-bordered {
+//   width: 80%;
+//   margin: 0 auto;
+//   border-collapse: collapse;
+// }
+
+// .btn {
+//   padding: 8px 16px;
+//   font-size: 16px;
+//   cursor: pointer;
+//   border-radius: 4px;
+//   border: none;
+// }
+
+// .btn-dark {
+//   background-color: #343a40;
+//   color: #fff;
+// }
+
+// .btn-primary {
+//   background-color: #007bff;
+//   color: #fff;
+// }
+
+// .btn-info {
+//   background-color: #17a2b8;
+//   color: #fff;
+// }
+
+// .btn-danger {
+//   background-color: #dc3545;
+//   color: #fff;
+// }
+// .background-image {
+//   background-image: url('/assets/back2.jpg'); /* Chemin vers l'image de fond */
+//   background-size: cover;
+//   background-position: center;
+//   min-height: 100vh; /* Assurez-vous que l'arrière-plan occupe toute la hauteur de l'écran */
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   background-attachment: fixed; /* Fixer l'arrière-plan pendant le défilement */
+//   border: 2px solid #ccc; /* Ajoutez ici les propriétés de la bordure si nécessaire */
+//   border-radius: 10px; /* Pour ajouter des coins arrondis si nécessaire */
+//   padding: 20px;
+// }
+// h2 {
+//   font-size: 24px;
+//   font-weight: bold;
+//   margin-bottom: 20px;
+//   color: #0056b3;
+// }
+// h1{
+//   color: #0056b3;
+
+// }
+
+
+
+// /* Autres styles personnalisés */
+// /* Ajoutez d'autres styles personnalisés au besoin */
+.menu-list {
+    background-color: #f2f2f2; /* Couleur de fond */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3); /* Ombre légère */
+}
+
+.menu-list h3 {
+    font-size: 24px; /* Taille de police */
+    color: #333; /* Couleur du texte */
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 5px 10px; /* Espacement intérieur pour le texte */
+    text-align: center; /* Centrer le texte horizontalement */
+}
+.plat-list {
+    background-color: #f2f2f2; /* Couleur de fond */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3); /* Ombre légère */
+}
+
+.plat-list h3 {
+    font-size: 24px; /* Taille de police */
+    color: #333; /* Couleur du texte */
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 5px 10px; /* Espacement intérieur pour le texte */
+    text-align: center; /* Centrer le texte horizontalement */
+}
+

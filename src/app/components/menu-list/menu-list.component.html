@@ -1,0 +1,98 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <h1 class="my-4 font-weight-bold text-right">Menus</h1>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="menu-list">
+
+              <h3 class="card-text">Liste des menus</h3>
+              </div>
+            </div>
+            <div class="col text-right">
+              <button class="btn btn-icon btn-3 btn-secondary" type="button" (click)="redirectToCreateMenu()">
+                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
+                <span class="btn-inner--text">Ajouter Menu</span>
+              </button>
+              <button class="btn btn-icon btn-3 btn-primary" type="button" (click)="redirectToAddPlat()">
+                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
+                <span class="btn-inner--text">Ajouter Plat</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive containerT">
+          <!-- Projects table -->
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Spécialité</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let menu of menus">
+                <td>{{ menu.nom }}</td>
+                <td>{{ menu.speciality }}</td>
+                <td>
+                  <!-- Bouton "Voir repas" pour consulter les repas associés au menu -->
+                  <button class="btn btn-primary" (click)="viewPlats(menu.id)">Voir Plats</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Affichage des plats -->
+  <div class="row mt-5" *ngIf="showPlats && selectedMenu">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="plat-list">
+
+              <h3 class="mb-0">Plats du menu : {{ selectedMenu.nom }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let plat of plats">
+                <td>{{ plat.nom }}</td>
+                <td>{{ plat.prix }} €</td>
+                <td>
+                  <!-- Buttons for updating and deleting a plat -->
+                  <button class="btn btn-info" (click)="updatePlat(plat)">Modifier</button>
+                  <button class="btn btn-danger" (click)="deletePlat(plat.id)">Supprimer</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
